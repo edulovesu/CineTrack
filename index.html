@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cinetrack</title>
+</head>
+<body>
+    <header>
+        <h1>CineTrack</h1>
+        <p>Your personal movie watchlist</p>
+    </header>
+    <section id="add-movie-section">
+        <h3>Add to Library</h3>
+        <form id="add-movie-form">
+            <div class="input-group">
+                <label for="add-movie-title">Movie Title</label>
+                <input type="text" id="add-movie-title" placeholder="Movie Title">
+                <label for="add-movie-genre">Genre</label>
+                <select id="add-movie-genre">
+                    <option value="">All Genres</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Romance">Romance</option>
+                </select>
+                <label for="rating">Rate</label>
+                <input type="number" id="rating" min="1" max="10" placeholder="1-10">
+                <button type="submit" id="add-btn">Add Movie</button>
+
+            </div>
+        </form>
+    </section>
+    <hr> <section id="library-management">
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search your collection...">
+            
+        </div>
+        <div id="controls">
+            <label for="filter-genre">Filter by Genre</label>
+            <select id="filter-genre">
+                <option value="">All Genres</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Romance">Romance</option>
+            </select>
+            <label for="filter-status">Filter by Status</label>
+            <select id="filter-status">
+                <option value="">All Statuses</option>
+                <option value="Watched">Watched</option>
+                <option value="To Watch">To Watch</option>
+                <option value="Watching">Watching</option>
+            </select>
+            <label for="sort-by">Sort by</label>
+            <select id="sort-by">
+                <option value="newest">Newest Added</option>
+                <option value="alphabetical">A-Z</option>
+                <option value="rating">Highest Rated</option>
+            </select>
+            
+        </div>
+    </section>    
+    <p id="movie-count" style="text-align:center; color: var(--text-secondary); font-size:0.9rem;"></p>
+    <div id="movie-grid"></div>
+</body>
+</html>
